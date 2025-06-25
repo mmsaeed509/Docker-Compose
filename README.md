@@ -33,9 +33,7 @@ docker compose up -d
 
 🔐 Access Portainer
 
-```
-https://localhost:9443
-```
+[**`https://localhost:9443`**](https://localhost:9443)
 
 📁 Volumes Used
 
