@@ -21,7 +21,7 @@ sudo pacman -S docker docker-compose
 1. **Clone this repository:**
 
 ```bash
-mkdir portainer-setup && cd portainer-setup
+cd Portainer
 ```
 2. **Run The Composer:**
 
