@@ -58,3 +58,24 @@ docker compose down
 docker compose down -v
 
 ```
+
+---
+
+### Add Podman environments
+
+```bash
+sudo systemctl enable --now podman.socket
+
+sudo podman volume create portainer
+
+sudo podman run -d \
+-p 9001:9001 \
+--name portainer_agent \
+--restart=always \
+--privileged \
+-v /run/podman/podman.sock:/var/run/docker.sock \
+-v /var/lib/containers/storage/volumes:/var/lib/docker/volumes \
+-v /:/host \
+docker.io/portainer/agent:2.27.8
+
+```
