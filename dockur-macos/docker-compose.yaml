@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  macos:
+    image: dockurr/macos
+    container_name: macos
+    privileged: true
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "8006:8006"
+    volumes:
+      - ./macos:/storage
+    stdin_open: true  # Enables -i (interactive)
+    tty: true         # Enables -t (TTY)
+    restart: always
+    environment:
+      VERSION: "13"
+    stop_grace_period: 120s
