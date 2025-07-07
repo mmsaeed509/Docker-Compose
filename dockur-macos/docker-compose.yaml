@@ -19,4 +19,6 @@ services:
     restart: always
     environment:
       VERSION: "13"
+      RAM_SIZE: "4G"
+      CPU_CORES: "4"
     stop_grace_period: 120s
